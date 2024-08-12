@@ -34,11 +34,19 @@ public class ArrayBaseQueueMain {
         System.out.println();
 
 
-        // 큐에 저장된 데이터를 한번에 삭제
-        System.out.println("Clearing queue...");
+        // 동일한 데이터를 큐에 저장한 후, 저장된 데이터를 모두 삭제
         for (int i = 1; i <= 6; i++) {
             queue.enqueue(i);
         }
+        System.out.printf("Queue capacity: %d, length: %d\n", queue.getCapacity(), queue.getSize());
+        queue.dump();
+        if (queue.isFull()) {
+            System.out.println("Queue is full!!");
+        }
+        System.out.println();
+
+        // 데이터를 모두 삭제
+        System.out.println("Clearing queue...");
         queue.clear();
         System.out.printf("Queue capacity: %d, length: %d\n", queue.getCapacity(), queue.getSize());
         queue.dump();
