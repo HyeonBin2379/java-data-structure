@@ -1,5 +1,6 @@
-package linkedlist;
+package datastructure.linkedlist;
 
+import datastructure.util.Node2;
 import java.util.Comparator;
 
 public class DoublyLinkedList<E> implements LinkedList<E> {

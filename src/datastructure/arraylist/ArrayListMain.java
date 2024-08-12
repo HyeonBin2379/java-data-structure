@@ -1,4 +1,4 @@
-package arraylist;
+package datastructure.arraylist;
 
 public class ArrayListMain {
 

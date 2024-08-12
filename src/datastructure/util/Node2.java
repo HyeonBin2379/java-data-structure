@@ -1,4 +1,4 @@
-package linkedlist;
+package datastructure.util;
 
 public class Node2<E> {
 
@@ -7,11 +7,11 @@ public class Node2<E> {
     private Node2<E> next;      // 이 노드의 다음 노드
 
     // 노드 생성
-    Node2() {
+    public Node2() {
         data = null;
         prev = next = this;
     }
-    Node2(E obj, Node2<E> prev, Node2<E> next) {
+    public Node2(E obj, Node2<E> prev, Node2<E> next) {
         this.data = obj;
         this.prev = prev;
         this.next = next;

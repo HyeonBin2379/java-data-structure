@@ -1,16 +1,16 @@
-package linkedlist;
+package datastructure.util;
 
 public class Node1<E> {
 
     private final E data;       // 데이터 저장
     private Node1<E> next;      // 다음 노드
 
-    Node1(E data, Node1<E> next) {
+    public Node1(E data, Node1<E> next) {
         this.data = data;
         this.next = next;
     }
 
-    Node1() {
+    public Node1() {
         data = null;
         next = this;
     }
