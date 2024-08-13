@@ -1,0 +1,35 @@
+package datastructure.deque;
+
+import datastructure.stack.Stack;
+
+public class DequeBaseStackMain {
+
+    public static void main(String[] args) {
+        // Stack 인터페이스로의 업캐스팅을 통해 덱을 바탕으로 구현한 스택의 기능을 사용
+        Stack<Integer> stack = new ListBaseDeque<>();
+
+
+        // 스택에 1~5까지의 정수를 순서대로 저장
+        for (int i = 1; i <= 5; ++i) {
+            stack.push(i);
+        }
+        // 현재 스택에 저장된 데이터 개수, 저장된 데이터(꼭대기 → 바닥 순) 출력
+        System.out.printf("Stack size: %d\n", stack.getSize());
+        System.out.print("data in stack(top -> bottom): ");
+        stack.dump();
+        System.out.println();
+
+        // 스택에 저장된 1개씩 꺼냈을 때, 꺼낸 데이터와 그 때의 스택의 크기 출력
+        while (!stack.isEmpty()) {
+            System.out.printf("popped: %d, stack size: %d\n", stack.peek(), stack.getSize());
+            stack.pop();
+        }
+        System.out.println();
+
+        // 현재 스택이 빈 스택인지 출력
+        System.out.println("Stack size: " + stack.getSize());
+        if (stack.isEmpty()) {
+            System.out.println("Stack is empty!!");
+        }
+    }
+}
