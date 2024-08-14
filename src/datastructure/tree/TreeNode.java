@@ -8,10 +8,10 @@ public class TreeNode<E extends Comparable<E>> {
 
     // 트리의 한 노드 생성
     public TreeNode() {
-        this(null,null,null);   // 루트 노드 삭제 시 더미 노드 생성에 활용
+        this(null,null,null);   // 루트 노드 삭제를 위한 더미 노드 생성에 활용
     }
     public TreeNode(E data) {
-        this(data, null, null);
+        this(data, null, null);     // 루트 노드 또는 리프 노드 생성 시 사용
     }
     public TreeNode(E data, TreeNode<E> left, TreeNode<E> right) {
         this.data = data;
